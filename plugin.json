@@ -1,0 +1,31 @@
+{
+  "name": "ItemPropertiesTab",
+  "description": "Zusätzlicher Eigenschaften Tab auf der Artikeldetailseite",
+  "namespace": "ItemPropertiesTab",
+  "author": "Sarah",
+  "version": "1.0.2",
+  "keywords": [
+    "properties",
+    "tab",
+    "single-item"
+  ],
+  "type": "template",
+  "require": [],
+  "authorIcon": "author.png",
+  "pluginIcon": "plugin.png",
+  "serviceProvider": "ItemPropertiesTab\\Providers\\ItemPropertiesTabServiceProvider",
+  "dataProviders": [
+    {
+      "key": "ItemPropertiesTab\\Providers\\ItemPropertiesTabProvider",
+      "name": "Eigenschaften Tab",
+      "description": "Fügt einen zusätzlichen Tab hinzu",
+      "defaultLayoutContainer": "Ceres::SingleItem.AddDetailTabs"
+    },
+    {
+      "key": "ItemPropertiesTab\\Providers\\ItemPropertiesTabContentProvider",
+      "name": "Eigenschaften Tab Inhalt",
+      "description": "Fügt den Inhalt des Eigenschaften Tabs hinzu",
+      "defaultLayoutContainer": "Ceres::SingleItem.AddDetailTabsContent"
+    }
+  ]
+}
